@@ -1,0 +1,39 @@
+Below are the most common command-line usages of ACE, followed by a complete reference for all the command-line options.
+
+Parsing (input is one sentence per line):
+''ace -g grammar.dat [input-file] [-1 | -n count]''
+
+Generating (input is one MRS per line):
+''ace -g grammar.dat -e [input-file] [-1 | -n count]''
+
+Compiling a grammar:
+''ace -G grammar.dat -g path-to-config.tdl''
+
+Complete Reference:
+|| -g filename || Identify the grammar to be used.  Normally, a compiled grammar image.  When compiling a grammar, the location of that grammar's config.tdl file.  ||
+|| -G filename || Enable grammar-compilation mode, and specify where to save the compiled grammar. ||
+|| -e || Generate, rather than parse. ||
+|| -n count || Use selective unpacking to enumerate only the top ''count'' results. ||
+|| -1 || Equivalent to ''-n 1''. ||
+|| -r roots || Supplies a space-delimited list of root instances (overriding the setting compiled into the grammar image). ||
+|| -l || Enable LUI mode.  You must have a working ''yzlui'' binary in your PATH. ||
+|| -f || Format each EP on its own line when printing MRSes. ||
+|| -p || Turn off packing. ||
+|| -R || Do not output results. ||
+|| -T || Only output MRSes, not trees. ||
+|| -t || Run as a [incr tsdb()] client. ||
+|| -h || Show a short synopsis of usage ||
+|| -V || Show ACE version number. ||
+|| -v || Increase verbosity; up to 3 -v options can be used if desired.  The additional output is unlikely to be useful except for debugging. ||
+|| -E || Run the REPP preprocessor on each input and output the result; do not perform token mapping or any further parsing. ||
+|| -m hostname || Join an ''arbiter'' grid of parsers. ||
+|| -q || Suppress printing the input sentence in cases of successful parsing. ||
+|| -X || Stop when the first result is found, rather than generating the complete packed forest. Not recommended. ||
+|| -L lexemes || Disable certain lexemes when parsing. ||
+|| -i || Perform a fine-grained timing profile of the operation requested (experimental). ||
+|| -y || Enable YY input mode (experimental). ||
+|| --show-realization-trees || Enables console output of trees when generating. ||
+|| --show-realization-mrses || Enables console output of MRSes when generating. ||
+|| --max-chart-megabytes N || Limits memory consumption to N megabytes during forest generation. ||
+|| --max-unpack-megabytes N || Limits memory consumption to N megabytes during unpacking (inclusive of memory consumed during forest generation). ||
+|| --report-labels || Causes labelled trees to be reported (both in TSDB mode and console mode). ||

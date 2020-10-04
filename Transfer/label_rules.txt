@@ -1,0 +1,39 @@
+# Notes on Footnotes
+
+- [n] footnotes apply to the whole document
+- [*] footnotes apply to a single # section
+
+:)
+
+
+# SNLI
+
+|   | orig. label   | sentence 1    | sentence 2    | new label |
+-----------------------------------------------------------------
+| 1 | entailment    | past tense[1] | future tense  | neutral   |
+|   | contradiction | future tense  | past tense    | neutral   |
+| 2 | entailment    | may           | original      | neutral   |
+|   | contradiction | may           | original      | neutral   |
+| 3 | neut./entail. | may           | may           | unchanged |
+| 4 | entailment    | negation      | negation      | s2 -> s1  |
+| 5 | ---           | it cleft      | passive       | unchanged |
+| 6 | ---           | it cleft      | original      | unchanged |
+| 7 | ---           | passive       | original      | unchanged |
+
+
+# STS
+
+| orig. label   | sentence 1    | sentence 2    | new label |
+-------------------------------------------------------------
+| ---           | negation      | negation      | unchanged |
+| ---           | syntactic     | syntactic     | unchanged |
+| ---           | modality      | same modality | unchanged |
+| ---           | tense         | same tense    | unchanged | [*]
+| ---           | inv. polar q  | inv. polar q  |           |
+
+[*] we should only use pairs that have the same tense before transformation.
+    original tenses can be extracted by ergtransfer.get_tense(datum['original'].mrs())
+
+
+[1] we should only use transformed sentences that retain original aspects (progressive & perfect).
+    original aspects can be extracted by ergtransfer.get_aspect(datum['original'].mrs())
