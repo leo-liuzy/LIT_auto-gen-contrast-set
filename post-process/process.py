@@ -21,8 +21,7 @@ import pandas as pd
 
 ORI = "original"
 
-# Rules as in master/Transfer/label_rules.txt
-# Key: orig_label;1st_trans;2nd_trans, value: index of types
+# Key: orig_label;1st_trans;2nd_trans, value: index of the rule
 # * means the rule could apply to all orig_label, and final_label is the same
 snli_rules = {
             "entailment;past simple;future simple": "1a",
