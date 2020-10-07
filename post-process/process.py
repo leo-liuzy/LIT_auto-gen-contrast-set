@@ -4,7 +4,7 @@ import os
 import argparse
 import numpy as np
 from collections import defaultdict
-from Transfer.ergtransfer import get_tense
+from transfer.ergtransfer import get_tense
 import torch
 import random
 from copy import deepcopy
@@ -17,7 +17,6 @@ from transformers import (
     XLNetLMHeadModel, XLNetTokenizer,
 )
 from delphin.codecs import simplemrs, mrsjson
-import pandas as pd
 
 ORI = "original"
 
