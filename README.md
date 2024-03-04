@@ -10,7 +10,8 @@ Coming soon
 
 ## Processed Dataset
 
-* We released the [datasets](https://drive.google.com/drive/folders/1qkqOg1Lk9VcaI5l-l1d6RHE_CBCTXl-A?usp=sharing) used in our paper. 
+* We released the [datasets](https://drive.google.com/drive/folders/1qkqOg1Lk9VcaI5l-l1d6RHE_CBCTXl-A?usp=sharing) used in our paper.
+  * Note: `orignal+basic` means (original [SNLI/MNLI] + basic [e.g. `i;i`] augmentation). Nothing like `+pa` is included, as that means compositional transformation.
 * We will also release the MRS parses with which people can transform sentences by their defined perturbation.
 
 **Note:** This is **not** complete parallel datasets of the original SNLI and MNLI. There are some sentences missing because the parser sometimes can’t parse the representation. You might need to run your transformation on some missed out data.
